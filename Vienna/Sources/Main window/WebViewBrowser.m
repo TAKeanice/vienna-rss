@@ -186,21 +186,14 @@
 }
 
 -(void)closeActiveTab {
-    [self closeTab:self.activeTabViewItem];
-}
-
-/*
- for manually closing tabs (not initiated from tabview)
- */
--(void)closeTab:(NSTabViewItem *)tabViewItem
-{
-	MMTabBarView *tabBar = self.tabBarControl;
-	NSTabView *tabView = tabBar.tabView;
+    MMTabBarView *tabBar = self.tabBarControl;
+    NSTabView *tabView = tabBar.tabView;
+    NSTabViewItem *tabViewItem = self.activeTabViewItem;
 
     if ((tabBar.delegate)
         && ([tabBar.delegate respondsToSelector:@selector(tabView:shouldCloseTabViewItem:)])
         && ![tabBar.delegate tabView:tabView shouldCloseTabViewItem:tabViewItem]) {
-            return;
+        return;
     }
     
     if ((tabBar.delegate)
