@@ -21,7 +21,7 @@ import Cocoa
 
 // MARK: State
 
-@available(OSX 10.10, *)
+@available(OSX 10.11, *)
 class BrowserTab: NSViewController {
 
     // MARK: Properties
@@ -33,19 +33,18 @@ class BrowserTab: NSViewController {
 		prefs.plugInsEnabled = true
 		let config = WKWebViewConfiguration()
 		config.preferences = prefs
-		if #available(OSX 10.11, *) {
-			config.applicationNameForUserAgent = "vienna-rss"
-			config.allowsAirPlayForMediaPlayback = true
-		}
+		// for useragent, we mimic the installed version of Safari and add our own identifier 
+		let shortSafariVersion = Bundle(path: "/Applications/Safari.app")?.infoDictionary?["CFBundleShortVersionString"] as? String
+		let viennaVersion = (NSApp as? ViennaApp)?.applicationVersion?.prefix(while: { character in return character != " " })
+		config.applicationNameForUserAgent = "Version/\(shortSafariVersion ?? "9.1") Safari/605 Vienna/\(viennaVersion ?? "3.5+")"
+		config.allowsAirPlayForMediaPlayback = true
 		if #available(OSX 10.12, *) {
 			config.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypes.all
 		}
 		let wv = CustomWKWebView(frame: .zero, configuration: config)
 		wv.allowsMagnification = true
 		wv.allowsBackForwardNavigationGestures = true
-		if #available(OSX 10.11, *) {
-			wv.allowsLinkPreview = true
-		}
+		wv.allowsLinkPreview = true
 		return wv
 	}()
 
@@ -183,7 +182,7 @@ class BrowserTab: NSViewController {
 
 //MARK: Tab functionality
 
-@available(OSX 10.10, *)
+@available(OSX 10.11, *)
 extension BrowserTab: Tab {
 
     var tabUrl: URL? {
@@ -298,7 +297,7 @@ extension BrowserTab: Tab {
 
 // MARK: Webview navigation
 
-@available(OSX 10.10, *)
+@available(OSX 10.11, *)
 extension BrowserTab: WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation?) {
