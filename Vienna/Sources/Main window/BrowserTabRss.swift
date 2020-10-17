@@ -78,7 +78,7 @@ extension BrowserTab: RSSSource {
             self.webView.evaluateJavaScript(BrowserTab.extractRssLinkScript) { result, error in
                 if error == nil, let result = result as? [String] {
                     //RSS feed link(s) detected
-                    self.rssUrls = result.compactMap { URL(string: $0 as String) }
+                    self.rssUrls = result.compactMap { URL(string: $0 as String, relativeTo: self.webView.url) }
                 } else {
                     //error or no rss url available
                     self.rssUrls = []
