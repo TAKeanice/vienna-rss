@@ -7,7 +7,6 @@
 
 import Foundation
 
-@available(OSX 10.10, *)
 @objc
 class WebKitArticleView: CustomWKWebView, ArticleContentView {
 

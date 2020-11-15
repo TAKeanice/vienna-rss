@@ -32,12 +32,7 @@
 	if((self = [super initWithFrame:frameRect]))
 	{
 		controller = APPCONTROLLER;
-
-		if (@available(macOS 10.10, *)) {
-			[self initializeWebKitArticleView];
-		} else {
-			[self initializeWebViewArticleView:frameRect];
-		}
+        [self initializeWebKitArticleView];
 
 		[articleView setOpenLinksInNewBrowser:YES];
 
@@ -47,7 +42,7 @@
 	return self;
 }
 
--(void)initializeWebKitArticleView API_AVAILABLE(macosx(10.10)) {
+-(void)initializeWebKitArticleView {
 	articleView = [[WebKitArticleView alloc] init];
 }
 
@@ -72,7 +67,7 @@
 	[[NSNotificationCenter defaultCenter] removeObserver:controller.browser.primaryTab.view name:WebViewProgressFinishedNotification object:articleView];
 }
 
--(void)tearDownWebViewArticleView API_AVAILABLE(macosx(10.10)) {
+-(void)tearDownWebViewArticleView {
 	ArticleView *webViewArticleView = (ArticleView *)articleView;
 	[webViewArticleView setUIDelegate:nil];
 	[webViewArticleView setFrameLoadDelegate:nil];

@@ -21,7 +21,6 @@ import Cocoa
 
 // MARK: State
 
-@available(OSX 10.10, *)
 class BrowserTab: NSViewController {
 
     // MARK: Properties
@@ -172,7 +171,6 @@ class BrowserTab: NSViewController {
 
 // MARK: Tab functionality
 
-@available(OSX 10.10, *)
 extension BrowserTab: Tab {
 
     var tabUrl: URL? {
@@ -276,7 +274,6 @@ extension BrowserTab: Tab {
 
 // MARK: Webview navigation
 
-@available(OSX 10.10, *)
 extension BrowserTab: WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation?) {
