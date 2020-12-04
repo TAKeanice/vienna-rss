@@ -1,4 +1,5 @@
 #import "AppController.h"
+#import "Article.h"
 #import "ArticleListView.h"
 #import "ArticleView.h"
 #import "Browser.h"
