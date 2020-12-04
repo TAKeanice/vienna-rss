@@ -9,5 +9,6 @@
 #import "PluginManager.h"
 #import "Preferences.h"
 #import "RefreshManager.h"
+#import "SubscriptionModel.h"
 #import "UnifiedDisplayView.h"
 #import "ViennaApp.h"
