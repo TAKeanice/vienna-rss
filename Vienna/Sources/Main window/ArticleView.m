@@ -168,7 +168,7 @@ static NSMutableDictionary * stylePathMappings = nil;
  * Create an HTML string comprising all articles in the specified array formatted using
  * the currently selected template.
  */
--(NSString *)articleTextFromArray:(NSArray *)msgArray
+-(NSString *)articleTextFromArray:(NSArray<Article *> *)msgArray
 {
 	NSUInteger index;
 	

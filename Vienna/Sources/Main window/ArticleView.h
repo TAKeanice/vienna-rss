@@ -34,6 +34,6 @@
 +(NSDictionary *)loadStylesMap;
 -(void)clearHTML;
 -(void)setHTML:(NSString *)htmlText;
--(NSString *)articleTextFromArray:(NSArray *)msgArray;
+-(NSString *)articleTextFromArray:(NSArray<Article *> *)msgArray;
 -(void)keyDown:(NSEvent *)theEvent;
 @end
