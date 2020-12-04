@@ -3,6 +3,7 @@
 #import "ArticleListView.h"
 #import "ArticleView.h"
 #import "Browser.h"
+#import "Criteria.h"
 #import "Database.h"
 #import "DisclosureView.h"
 #import "Export.h"

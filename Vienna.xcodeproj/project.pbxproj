@@ -52,7 +52,6 @@
 		035B703A19E0E4AE00197334 /* Vienna_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 035B703919E0E4AE00197334 /* Vienna_Tests.m */; };
 		0379E2381A2082E600D58BFE /* AppearancePreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0379E2371A2082E600D58BFE /* AppearancePreferencesViewController.m */; };
 		0379E23B1A20831600D58BFE /* SyncingPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0379E23A1A20831600D58BFE /* SyncingPreferencesViewController.m */; };
-		0383DC551B71B44700A11950 /* CriteriaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0383DC541B71B44700A11950 /* CriteriaTests.m */; };
 		0386A5C11E1FA586000C10CE /* BrowserPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0386A5BB1E1FA586000C10CE /* BrowserPane.xib */; };
 		03A131B31AA54EAC0037471F /* VNADatabaseMigration.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A131B21AA54EAC0037471F /* VNADatabaseMigration.m */; };
 		03B35B841B75E9E0001DB06D /* NSDate+Vienna.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B35B831B75E9E0001DB06D /* NSDate+Vienna.m */; };
@@ -136,6 +135,7 @@
 		B8CABFE5257A3249006D9F1B /* URL+URIEquivalence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CABFE4257A3249006D9F1B /* URL+URIEquivalence.swift */; };
 		B8CABFF3257A335C006D9F1B /* RichXMLParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CABFF2257A335C006D9F1B /* RichXMLParserTests.swift */; };
 		B8CAC001257A33EE006D9F1B /* ExportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CAC000257A33EE006D9F1B /* ExportTests.swift */; };
+		B8CAC00F257A3506006D9F1B /* CriteriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CAC00E257A3506006D9F1B /* CriteriaTests.swift */; };
 		EA43C70914A370DB00F2D843 /* VTPG_Common.m in Sources */ = {isa = PBXBuildFile; fileRef = EA43C70814A370DB00F2D843 /* VTPG_Common.m */; };
 		F41CA694218F56140072F734 /* NSWorkspace+OpenWithMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F41CA692218F56130072F734 /* NSWorkspace+OpenWithMenu.m */; };
 		F600B19A2202536800684F5C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F600B1992202536800684F5C /* Colors.xcassets */; };
@@ -249,7 +249,6 @@
 		0379E2371A2082E600D58BFE /* AppearancePreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearancePreferencesViewController.m; sourceTree = "<group>"; };
 		0379E2391A20831600D58BFE /* SyncingPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncingPreferencesViewController.h; sourceTree = "<group>"; };
 		0379E23A1A20831600D58BFE /* SyncingPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncingPreferencesViewController.m; sourceTree = "<group>"; };
-		0383DC541B71B44700A11950 /* CriteriaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriteriaTests.m; sourceTree = "<group>"; };
 		0386A5BB1E1FA586000C10CE /* BrowserPane.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrowserPane.xib; sourceTree = "<group>"; };
 		03A131B11AA54EAC0037471F /* VNADatabaseMigration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNADatabaseMigration.h; sourceTree = "<group>"; };
 		03A131B21AA54EAC0037471F /* VNADatabaseMigration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VNADatabaseMigration.m; sourceTree = "<group>"; };
@@ -415,6 +414,7 @@
 		B8CABFE4257A3249006D9F1B /* URL+URIEquivalence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+URIEquivalence.swift"; sourceTree = "<group>"; };
 		B8CABFF2257A335C006D9F1B /* RichXMLParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichXMLParserTests.swift; sourceTree = "<group>"; };
 		B8CAC000257A33EE006D9F1B /* ExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportTests.swift; sourceTree = "<group>"; };
+		B8CAC00E257A3506006D9F1B /* CriteriaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriteriaTests.swift; sourceTree = "<group>"; };
 		EA43C70714A370DB00F2D843 /* VTPG_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPG_Common.h; sourceTree = "<group>"; };
 		EA43C70814A370DB00F2D843 /* VTPG_Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPG_Common.m; sourceTree = "<group>"; };
 		EA6D3E5914D8048C004DCB80 /* Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debug.h; sourceTree = "<group>"; };
@@ -936,7 +936,7 @@
 				035B703919E0E4AE00197334 /* Vienna_Tests.m */,
 				035B703719E0E4AE00197334 /* Supporting Files */,
 				B8CABFC8257A31E1006D9F1B /* SubscriptionModelTests.swift */,
-				0383DC541B71B44700A11950 /* CriteriaTests.m */,
+				B8CAC00E257A3506006D9F1B /* CriteriaTests.swift */,
 				B8CAC000257A33EE006D9F1B /* ExportTests.swift */,
 				B8CABFF2257A335C006D9F1B /* RichXMLParserTests.swift */,
 				B8CABFE4257A3249006D9F1B /* URL+URIEquivalence.swift */,
@@ -1820,13 +1820,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D36B44B1D37F91E009736C1 /* ArticleTests.m in Sources */,
-				0383DC551B71B44700A11950 /* CriteriaTests.m in Sources */,
 				B8CABFC9257A31E1006D9F1B /* SubscriptionModelTests.swift in Sources */,
 				F648C2B81E7F3BEA00CE4043 /* DirectoryMonitorTests.swift in Sources */,
 				B8CABFC1257A30DE006D9F1B /* ArticleTests.swift in Sources */,
 				B8CABFF3257A335C006D9F1B /* RichXMLParserTests.swift in Sources */,
 				B8CABFE5257A3249006D9F1B /* URL+URIEquivalence.swift in Sources */,
 				035B703A19E0E4AE00197334 /* Vienna_Tests.m in Sources */,
+				B8CAC00F257A3506006D9F1B /* CriteriaTests.swift in Sources */,
 				B8CAC001257A33EE006D9F1B /* ExportTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
