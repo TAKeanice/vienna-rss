@@ -21,44 +21,44 @@ import XCTest
 
 class CriteriaTests: XCTestCase {
 
-	override func setUpWithError() throws {
-		try super.setUpWithError()
-		// Put setup code here. This method is called before the invocation of each test method in the class.
-	}
+    override func setUpWithError() throws {
+        try super.setUpWithError()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
 
-	override func tearDownWithError() throws {
-		// Put teardown code here. This method is called after the invocation of each test method in the class.
-		try super.tearDownWithError()
-	}
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        try super.tearDownWithError()
+    }
 
-	// MARK: Criteria Tests
+    // MARK: Criteria Tests
 
-	func testCriteriaTreeInitWithString() {
-		// This tests initialising a CriteriaTree with a string.
-		// Only called by the Database class when loading smart folders
-		let criteriaTreeString = "<?xml version=\"1.0\" encoding=\"utf-8\"?><criteriagroup condition=\"all\"><criteria field=\"Flagged\"><operator>1</operator><value>Yes</value></criteria></criteriagroup>"
+    func testCriteriaTreeInitWithString() {
+        // This tests initialising a CriteriaTree with a string.
+        // Only called by the Database class when loading smart folders
+        let criteriaTreeString = "<?xml version=\"1.0\" encoding=\"utf-8\"?><criteriagroup condition=\"all\"><criteria field=\"Flagged\"><operator>1</operator><value>Yes</value></criteria></criteriagroup>"
 
-		let testCriteriaTree = CriteriaTree(string: criteriaTreeString)!
-		XCTAssertTrue(testCriteriaTree.criteriaEnumerator.allObjects.first is Criteria, "Pass")
-	}
+        let testCriteriaTree = CriteriaTree(string: criteriaTreeString)!
+        XCTAssertTrue(testCriteriaTree.criteriaEnumerator.allObjects.first is Criteria, "Pass")
+    }
 
-	func testCriteriaTreeInitWithString2() {
-		// This tests initialising a CriteriaTree with a string that has
-		// multiple criteria.
-		// Only called by the Database class when loading smart folders
-		let criteriaTreeString = "<?xml version=\"1.0\" encoding=\"utf-8\"?><criteriagroup condition=\"all\"><criteria field=\"Flagged\"><operator>1</operator><value>Yes</value></criteria><criteria field=\"Date\"><operator>1</operator><value>today</value></criteria></criteriagroup>"
+    func testCriteriaTreeInitWithString2() {
+        // This tests initialising a CriteriaTree with a string that has
+        // multiple criteria.
+        // Only called by the Database class when loading smart folders
+        let criteriaTreeString = "<?xml version=\"1.0\" encoding=\"utf-8\"?><criteriagroup condition=\"all\"><criteria field=\"Flagged\"><operator>1</operator><value>Yes</value></criteria><criteria field=\"Date\"><operator>1</operator><value>today</value></criteria></criteriagroup>"
 
-		let testCriteriaTree = CriteriaTree(string: criteriaTreeString)!
-		let allCriteria = testCriteriaTree.criteriaEnumerator.allObjects;
-		XCTAssertGreaterThan(allCriteria.count, 1, "Pass")
-	}
+        let testCriteriaTree = CriteriaTree(string: criteriaTreeString)!
+        let allCriteria = testCriteriaTree.criteriaEnumerator.allObjects;
+        XCTAssertGreaterThan(allCriteria.count, 1, "Pass")
+    }
 
-	func testCriteriaTreeString() {
-		// This tests returning a criteria tree as an XML string
-		let criteriaTreeString = "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?><criteriagroup condition=\"all\"><criteria field=\"Flagged\"><operator>1</operator><value>Yes</value></criteria></criteriagroup>"
+    func testCriteriaTreeString() {
+        // This tests returning a criteria tree as an XML string
+        let criteriaTreeString = "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?><criteriagroup condition=\"all\"><criteria field=\"Flagged\"><operator>1</operator><value>Yes</value></criteria></criteriagroup>"
 
-		let testCriteriaTree = CriteriaTree(string: criteriaTreeString)!
-		XCTAssertEqual(testCriteriaTree.string.lowercased(), criteriaTreeString.lowercased())
-	}
+        let testCriteriaTree = CriteriaTree(string: criteriaTreeString)!
+        XCTAssertEqual(testCriteriaTree.string.lowercased(), criteriaTreeString.lowercased())
+    }
 
 }

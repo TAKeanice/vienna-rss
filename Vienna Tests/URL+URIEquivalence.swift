@@ -21,33 +21,33 @@ import Foundation
 
 extension URL {
 
-	///
-	/// NSURL equivalency test
-	/// http://stackoverflow.com/questions/12310258/reliable-way-to-compare-two-nsurl-or-one-nsurl-and-an-nsstring
-	///
-	func isEquivalent(_ aURL: URL) -> Bool {
-		if self == aURL { return true }
+    ///
+    /// NSURL equivalency test
+    /// http://stackoverflow.com/questions/12310258/reliable-way-to-compare-two-nsurl-or-one-nsurl-and-an-nsstring
+    ///
+    func isEquivalent(_ aURL: URL) -> Bool {
+        if self == aURL { return true }
 
-		if self.scheme!.caseInsensitiveCompare(aURL.scheme!) != .orderedSame { return false }
-		if self.host!.caseInsensitiveCompare(aURL.host!) != .orderedSame { return false }
+        if self.scheme!.caseInsensitiveCompare(aURL.scheme!) != .orderedSame { return false }
+        if self.host!.caseInsensitiveCompare(aURL.host!) != .orderedSame { return false }
 
-		// NSURL path is smart about trimming trailing slashes
-		// note case-sensitivty here
-		if self.path.compare(aURL.path) != .orderedSame { return false }
+        // NSURL path is smart about trimming trailing slashes
+        // note case-sensitivty here
+        if self.path.compare(aURL.path) != .orderedSame { return false }
 
-		// at this point, we've established that the urls are equivalent according to the rfc
-		// insofar as scheme, host, and paths match
+        // at this point, we've established that the urls are equivalent according to the rfc
+        // insofar as scheme, host, and paths match
 
-		// according to rfc2616, port's can weakly match if one is missing and the
-		// other is default for the scheme, but for now, let's insist on an explicit match
-		if self.port != nil || aURL.port != nil {
-			if !(self.port == aURL.port) { return false }
-			if !(self.query == aURL.query) { return false }
-		}
+        // according to rfc2616, port's can weakly match if one is missing and the
+        // other is default for the scheme, but for now, let's insist on an explicit match
+        if self.port != nil || aURL.port != nil {
+            if !(self.port == aURL.port) { return false }
+            if !(self.query == aURL.query) { return false }
+        }
 
-		// for things like user/pw, fragment, etc., seems sensible to be
-		// permissive about these.
-		return true
-	}
+        // for things like user/pw, fragment, etc., seems sensible to be
+        // permissive about these.
+        return true
+    }
 
 }

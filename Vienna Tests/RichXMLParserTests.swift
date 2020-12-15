@@ -21,40 +21,40 @@ import XCTest
 
 class RichXMLParserTests: XCTestCase {
 
-	override func setUpWithError() throws {
-		try super.setUpWithError()
-		// Put setup code here. This method is called before the invocation of each test method in the class.
-	}
+    override func setUpWithError() throws {
+        try super.setUpWithError()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
 
-	override func tearDownWithError() throws {
-		// Put teardown code here. This method is called after the invocation of each test method in the class.
-		try super.tearDownWithError()
-	}
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        try super.tearDownWithError()
+    }
 
-	func testParseRichXML() {
+    func testParseRichXML() {
 
-		//
-		// FIXME: Remove this?
-		//
+        //
+        // FIXME: Remove this?
+        //
 
-		/*
-		var success = false
+        /*
+        var success = false
 
-		// Test extracting feeds to an array
-		let url = URL(fileURLWithPath: "/Users/josh/test.rdf")
-		// old parser
-		let feedData = try Data(contentsOf: url)
-		let oldParser = RichXMLParser()
-		let oldParsedOK = oldParser.parseRichXML(feedData)
+        // Test extracting feeds to an array
+        let url = URL(fileURLWithPath: "/Users/josh/test.rdf")
+        // old parser
+        let feedData = try Data(contentsOf: url)
+        let oldParser = RichXMLParser()
+        let oldParsedOK = oldParser.parseRichXML(feedData)
 
-		// new parser
-		if (oldParsedOK){
+        // new parser
+        if (oldParsedOK){
 
-		}
+        }
 
-		XCTAssertTrue(success, "Pass")
-		*/
-	}
+        XCTAssertTrue(success, "Pass")
+        */
+    }
 
 
 }
